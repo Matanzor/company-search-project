@@ -1,0 +1,15 @@
+{
+    "name": "company-search-backend",
+    "version": "1.0.0",
+    "description": "Simple NodeJS backend for company search using SQL Server",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "express": "^4.21.2",
+        "msnodesqlv8": "^4.5.0",
+        "mssql": "^11.0.1"
+    }
+}
