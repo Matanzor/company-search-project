@@ -1,0 +1,49 @@
+<div class="container">
+    <h1>Company Search</h1>
+    <form (ngSubmit)="search()" #searchForm="ngForm">
+      <div>
+        <label for="companyName">Company Name:</label>
+        <input type="text" id="companyName" [(ngModel)]="companyName" name="companyName" />
+        <select [(ngModel)]="companyNameSearchType" name="companyNameSearchType">
+          <option *ngFor="let type of searchTypes" [value]="type.value">{{ type.display }}</option>
+        </select>
+      </div>
+      <div>
+        <label for="contactName">Contact Name:</label>
+        <input type="text" id="contactName" [(ngModel)]="contactName" name="contactName" />
+        <select [(ngModel)]="contactNameSearchType" name="contactNameSearchType">
+          <option *ngFor="let type of searchTypes" [value]="type.value">{{ type.display }}</option>
+        </select>
+      </div>
+      <div>
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" [(ngModel)]="phone" name="phone" />
+      </div>
+      <button type="submit">Search</button>
+    </form>
+  
+    <div *ngIf="companies.length">
+      <h2>Company List</h2>
+      <table border="1">
+        <thead>
+          <tr>
+            <th>Company Name</th>
+            <th>Contact Name</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Total Orders</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let company of companies">
+            <td>{{ company.CompanyName }}</td>
+            <td>{{ company.ContactName }}</td>
+            <td>{{ company.Phone }}</td>
+            <td>{{ company.Address }}</td>
+            <td>{{ company.TotalOrders }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
