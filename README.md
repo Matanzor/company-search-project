@@ -149,6 +149,7 @@ The Angular frontend provides a simple and intuitive user interface for searchin
   The UI displays a list of companies along with details such as Company Name, Contact Name, Phone, Address, and Total Orders.
 - Responsive Design:
   The UI is designed to be responsive and user-friendly, ensuring a smooth search experience.
+![image](https://github.com/user-attachments/assets/bccb0ffb-400d-459b-bd6e-58800b6d2e2b)
 
 ## API Endpoints 🌐
 ### GET /api/companies
